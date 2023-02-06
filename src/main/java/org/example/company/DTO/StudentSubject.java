@@ -35,7 +35,7 @@ public class StudentSubject {
         return studentId;
     }
 
-    public UUID getSubject() {
+    public UUID getSubjectId() {
         return subjectId;
     }
 

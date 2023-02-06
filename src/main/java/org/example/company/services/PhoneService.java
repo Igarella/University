@@ -8,8 +8,6 @@ import java.util.UUID;
 public interface PhoneService {
     List<Phone> getAllPhones();
 
-    void writePhones(List<Phone> list);
-
     void addPhone(Phone phone);
 
     void deletePhone(UUID uuid);

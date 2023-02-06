@@ -16,12 +16,6 @@ public class PhoneServiceIMPL implements PhoneService {
     }
 
     @Override
-    public void writePhones(List<Phone> list) {
-        PhonesRepository repository = new PhoneRepositoryIMPL();
-        repository.writePhones(list);
-    }
-
-    @Override
     public void addPhone(Phone phone) {
         PhonesRepository repository = new PhoneRepositoryIMPL();
         repository.addPhone(phone);

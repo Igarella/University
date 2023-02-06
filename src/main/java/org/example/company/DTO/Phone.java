@@ -8,17 +8,15 @@ public class Phone {
     private String typePhone;
     private UUID StudentId;
 
-    public Phone(int prefixCountry, String numberPhone, String typePhone, UUID studentId) {
+    public Phone(String numberPhone, String typePhone, UUID studentId) {
         this.id = UUID.randomUUID();
-        this.prefixCountry = prefixCountry;
         this.numberPhone = numberPhone;
         this.typePhone = typePhone;
         this.StudentId = studentId;
     }
 
-    public Phone(UUID id, int prefixCountry, String numberPhone, String typePhone, UUID studentId) {
+    public Phone(UUID id,String numberPhone, String typePhone, UUID studentId) {
         this.id = id;
-        this.prefixCountry = prefixCountry;
         this.numberPhone = numberPhone;
         this.typePhone = typePhone;
         StudentId = studentId;
@@ -28,7 +26,6 @@ public class Phone {
     public String toString() {
         return "Phone{" +
                 "id=" + id +
-                ", prefixCountry=" + prefixCountry +
                 ", numberPhone='" + numberPhone + '\'' +
                 ", typePhone='" + typePhone + '\'' +
                 ", StudentId=" + StudentId +

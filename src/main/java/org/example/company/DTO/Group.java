@@ -6,22 +6,19 @@ import java.util.UUID;
 
 public class Group {
     private UUID groupId;
-    private UUID facultyId;
     private String groupName;
     private UUID specializationId;
     private List<Student> studentList = new ArrayList<>();
 
 
-    public Group(UUID facultyId, String groupName, UUID specializationId) {
+    public Group(String groupName, UUID specializationId) {
         this.groupId = UUID.randomUUID();
-        this.facultyId = facultyId;
         this.groupName = groupName;
         this.specializationId = specializationId;
     }
 
-    public Group(UUID groupId, UUID facultyId, String groupName, UUID specializationId) {
+    public Group(UUID groupId, String groupName, UUID specializationId) {
         this.groupId = groupId;
-        this.facultyId = facultyId;
         this.groupName = groupName;
         this.specializationId = specializationId;
     }
@@ -34,13 +31,6 @@ public class Group {
         this.groupId = groupId;
     }
 
-    public UUID getFacultyId() {
-        return facultyId;
-    }
-
-    public void setFacultyId(UUID facultyId) {
-        this.facultyId = facultyId;
-    }
 
     public String getGroupName() {
         return groupName;
@@ -70,7 +60,6 @@ public class Group {
     public String toString() {
         return "Group{" +
                 "groupId=" + groupId +
-                ", facultyId=" + facultyId +
                 ", groupName='" + groupName + '\'' +
                 ", specializationId=" + specializationId +
                 ", studentList=" + studentList +

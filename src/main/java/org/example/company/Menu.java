@@ -60,16 +60,18 @@ public class Menu {
                 case 4 -> {
                     System.out.println("Введите id студента");
                     UUID studentId = UUID.fromString(in.next());
-                    System.out.println("Введите префикс страны");
-                    int prefix = in.nextInt();
                     System.out.println("Введите телефон");
                     String phone = in.next();
                     System.out.println("Введите тип телефона (моб/дом)");
                     String typePhone = in.next();
-                    Phone studentPhone = new Phone(prefix, phone, typePhone, studentId);
+                    Phone studentPhone = new Phone(phone, typePhone, studentId);
                     PhoneService service = new PhoneServiceIMPL();
                     service.addPhone(studentPhone);
 
+                }
+                case 41 -> {
+                    PhoneService service = new PhoneServiceIMPL();
+                    service.getAllPhones().forEach(System.out::println);
                 }
                 case 5 -> {
                     System.out.println("Введите id студента");
@@ -185,7 +187,9 @@ public class Menu {
                 case 113 -> {
                     System.out.println("Введите название специализации");
                     String specializationName = in.next();
-                    Specialization specialization = new Specialization(specializationName);
+                    System.out.println("Введите название факультета");
+                    UUID facultyId = UUID.fromString(in.next());
+                    Specialization specialization = new Specialization(specializationName, facultyId);
                     SpecializationService service = new SpecializationServiceIMPL();
                     service.addSpecialization(specialization);
                 }
@@ -256,3 +260,5 @@ public class Menu {
         } while (menu != 90);
     }
 }
+
+// TODO: 04.02.2023 нужно ли делать выполнение метода deletePhone и если делать то через phoneId или через studentId?

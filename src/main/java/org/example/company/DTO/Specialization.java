@@ -1,5 +1,8 @@
 package org.example.company.DTO;
 
+import javax.sql.rowset.serial.SQLOutputImpl;
+import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -7,15 +10,28 @@ import java.util.UUID;
 public class Specialization {
     private UUID specializationId;
     private String specializationName;
+    private UUID facultyId;
 
-    public Specialization(String specializationName) {
-        this.specializationId = UUID.randomUUID();
-        this.specializationName = specializationName;
+    public UUID getFacultyId() {
+        return facultyId;
     }
 
-    public Specialization(UUID specializationId, String specializationName) {
+    public void setFacultyId(UUID facultyId) {
+        this.facultyId = facultyId;
+    }
+
+    public Specialization(String specializationName, UUID facultyId) {
+        this.specializationId = UUID.randomUUID();
+        this.specializationName = specializationName;
+        this.facultyId = facultyId;
+    }
+
+
+    public Specialization(UUID specializationId, String specializationName, UUID facultyId) {
         this.specializationId = specializationId;
         this.specializationName = specializationName;
+        this.facultyId = facultyId;
+
     }
 
     public UUID getSpecializationId() {
@@ -34,4 +50,21 @@ public class Specialization {
         this.specializationName = specializationName;
     }
 
+    @Override
+    public String toString() {
+        return "Specialization{" +
+                "specializationId=" + specializationId +
+                ", specializationName='" + specializationName + '\'' +
+                '}';
+    }
+
+//    public static void main(String[] args) {
+//        try {
+//            SQLOutput sqlOutput = new SQLOutputImpl();
+//
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//    }
 }

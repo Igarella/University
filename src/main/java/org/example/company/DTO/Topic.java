@@ -8,7 +8,6 @@ public class Topic {
     private UUID id;
     private String name;
     private UUID subjectId;
-    private List<Assessment> assessments = new ArrayList<>();
 
     public Topic(String name, UUID subjectId) {
         this.id = UUID.randomUUID();
@@ -22,14 +21,6 @@ public class Topic {
         this.subjectId = subjectId;
     }
 
-    public List<Assessment> getAssessments() {
-        return assessments;
-    }
-
-    public void setAssessments(Assessment assessment) {
-        this.assessments.add(assessment);
-    }
-
 
     @Override
     public String toString() {
@@ -37,7 +28,6 @@ public class Topic {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", subjectId=" + subjectId +
-                ", assessments=" + assessments +
                 '}';
     }
 

@@ -12,8 +12,6 @@ public interface PhonesRepository {
 
     List<Phone> getAllPhones();
 
-    void writePhones(List<Phone> list);
-
     void addPhone(Phone phone);
 
     void deletePhone(UUID uuid);

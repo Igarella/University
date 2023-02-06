@@ -10,6 +10,7 @@ public class MenuProgram {
         System.out.println("22 – Удаление студента");
         System.out.println("23 – Просмотр списка групп");
         System.out.println("4 – Добавление телефона студенту");
+        System.out.println("41 – Просмотр списка телефонов");
         System.out.println("5 – Получение студента по Id");
         System.out.println("6 – Добавление email студенту");
         System.out.println("7 – Просмотр списка предметов");

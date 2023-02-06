@@ -4,11 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="153bbc9e-b8dc-479d-9e8c-e05ec4ff05e5" name="Changes" comment="" />
+    <list default="true" id="153bbc9e-b8dc-479d-9e8c-e05ec4ff05e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Specialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Specialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/StudentSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/StudentSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Topic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/MenuProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/MenuProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/GroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/GroupRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/AssessmentRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/AssessmentRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/EmailRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/EmailRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/FacultyRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/FacultyRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/GroupRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/GroupRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/PhoneRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/PhoneRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/SpecializationRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/SpecializationRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/StudentSubjectRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/StudentSubjectRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/StudentsRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/StudentsRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/SubjectRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/SubjectRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/TopicsOfSubjectRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/TopicsOfSubjectRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/PhonesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/PhonesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/services/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/services/GroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/services/IMPL/GroupServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/services/IMPL/GroupServiceIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/services/IMPL/PhoneServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/services/IMPL/PhoneServiceIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/services/PhoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/services/PhoneService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="3e343d9d-d4b3-4a6d-add2-3fb1bab84906" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -21,6 +55,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2L2XwKXXZHqlzLw2YnjKUglADgX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,17 +64,23 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/igor/Desktop/tomcat/apache-tomcat-9.0.70/webapps/University/src/main/java/org/example",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -47,13 +88,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/org/example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.example.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.company.Main" />
+  <component name="RunManager" selected="Application.SpecializationRepositoryIMPL">
+    <configuration name="AssessmentRepositoryIMPL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.company.repositories.IMPL.AssessmentRepositoryIMPL" />
       <module name="University" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.company.*" />
+          <option name="PATTERN" value="org.example.company.repositories.IMPL.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -61,12 +102,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.example.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+    <configuration name="SpecializationRepositoryIMPL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.company.repositories.IMPL.SpecializationRepositoryIMPL" />
       <module name="University" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.company.repositories.IMPL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentSubjectRepositoryIMPL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.company.repositories.IMPL.StudentSubjectRepositoryIMPL" />
+      <module name="University" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.company.repositories.IMPL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubjectRepositoryIMPL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.company.repositories.IMPL.SubjectRepositoryIMPL" />
+      <module name="University" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.company.repositories.IMPL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopicsOfSubjectRepositoryIMPL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.company.repositories.IMPL.TopicsOfSubjectRepositoryIMPL" />
+      <module name="University" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.company.repositories.IMPL.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,8 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.org.example.Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SpecializationRepositoryIMPL" />
+        <item itemvalue="Application.AssessmentRepositoryIMPL" />
+        <item itemvalue="Application.StudentSubjectRepositoryIMPL" />
+        <item itemvalue="Application.TopicsOfSubjectRepositoryIMPL" />
+        <item itemvalue="Application.SubjectRepositoryIMPL" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675070388967</updated>
       <workItem from="1675070390070" duration="1278000" />
-      <workItem from="1675073646947" duration="565000" />
+      <workItem from="1675073646947" duration="49846000" />
     </task>
     <servers />
   </component>
