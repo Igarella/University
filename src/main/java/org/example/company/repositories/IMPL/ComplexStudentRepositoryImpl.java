@@ -4,32 +4,46 @@ import org.example.company.DTO.ComplexId;
 import org.example.company.repositories.ComplexStudentRepository;
 
 import java.io.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class ComplexStudentRepositoryImpl implements ComplexStudentRepository {
+    private static String USER = "postgres";
+    private static String PASSWORD = "1234";
+    private static String URL = "jdbc:postgresql://localhost:5432/students";
+
+    public static void main(String[] args) {
+        List<ComplexId> complexIdList = new ArrayList<>();
+        try {
+            Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement statement = connection.createStatement();
+            String sql = "select name, name_table\n" +
+                    "from mytable1\n" +
+                    "inner join mytable2 on mytable1.id = Mytable2.fk_mytable1_id\n, " +
+                    "order by mytable1.id;";
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                String name1 = resultSet.getString("name");
+                String name2 = resultSet.getString("name_table");
+                System.out.println(name1 + name2);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Override
     public List<ComplexId> getAllComplexStudents() {
         List<ComplexId> complexIdList = new ArrayList<>();
         try {
-            File file = new File("resources/ComplexId.txt");
-            //создаем объект FileReader для объекта File
-            FileReader fr = new FileReader(file);
-            //создаем BufferedReader с существующего FileReader для построчного считывания
-            BufferedReader reader = new BufferedReader(fr);
-            // считаем сначала первую строку
-            String line = reader.readLine();
-            while (line != null) {
-                String[] complexStudentFields = line.split(",");
-                ComplexId complexId = new ComplexId(UUID.fromString(complexStudentFields[0]), UUID.fromString(complexStudentFields[1]),
-                        UUID.fromString(complexStudentFields[2]), UUID.fromString(complexStudentFields[3]), UUID.fromString(complexStudentFields[4]));
-                complexIdList.add(complexId);
-                // считываем остальные строки в цикле
-                line = reader.readLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+            Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement statement = connection.createStatement();
+            String sql = "select * from complex";
+            ResultSet resultSet = statement.executeQuery(sql);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
         return complexIdList;
     }

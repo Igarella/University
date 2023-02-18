@@ -63,3 +63,5 @@ public class TimeTable {
                 '}';
     }
 }
+
+// TODO: 13.02.2023 drop column fk_subject_id from teachers 

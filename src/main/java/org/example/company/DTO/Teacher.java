@@ -1,66 +1,25 @@
 package org.example.company.DTO;
 
-import java.util.UUID;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
+import java.util.UUID;
+@Data
 public class Teacher {
     private UUID teacherId;
     private String firstName;
-    private String secondName;
-    private UUID subjectId;
+    private String thirdName;
 
-    public Teacher(String firstName, String secondName, UUID subjectId) {
-        this.teacherId = UUID.randomUUID();
+    public Teacher(String firstName, String thirdName) {
         this.firstName = firstName;
-        this.secondName = secondName;
-        this.subjectId = subjectId;
+        this.thirdName = thirdName;
     }
 
-    public Teacher(UUID teacherId, String firstName, String secondName, UUID subjectId) {
+    public Teacher(UUID teacherId, String firstName, String thirdName) {
         this.teacherId = teacherId;
         this.firstName = firstName;
-        this.secondName = secondName;
-        this.subjectId = subjectId;
-    }
-
-    public UUID getTeacherId() {
-        return teacherId;
-    }
-
-    public void setTeacherId(UUID teacherId) {
-        this.teacherId = teacherId;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }
-
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
-
-    public UUID getSubjectId() {
-        return subjectId;
-    }
-
-    public void setSubjectId(UUID subjectId) {
-        this.subjectId = subjectId;
-    }
-
-    @Override
-    public String toString() {
-        return "Teacher{" +
-                "teacherId=" + teacherId +
-                ", firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", subjectId=" + subjectId +
-                '}';
+        this.thirdName = thirdName;
     }
 }

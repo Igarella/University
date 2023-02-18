@@ -1,15 +1,17 @@
 package org.example.company.DTO;
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.*;
-
+//@Component
 public class Student implements Serializable {
     private UUID id;
     private String firstName;
     private String secondName;
     private boolean archived = false;
     private UUID groupId;
-//    private UUID facultyId;
+    private UUID facultyId;
     private String facultyName;
     private String groupName;
     private String birthday;

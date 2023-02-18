@@ -17,6 +17,10 @@ public class FacultyRepositoryImpl implements FacultyRepository {
     private static String PASSWORD = "1234";
     private static String URL = "jdbc:postgresql://localhost:5432/students";
 
+    public static void main(String[] args) {
+
+    }
+
 
     @Override
     public void addFaculty(Faculty faculty) {

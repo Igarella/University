@@ -2,6 +2,7 @@ package org.example.company.repositories.IMPL;
 
 import org.example.company.DTO.Email;
 import org.example.company.DTO.Email;
+import org.example.company.DTO.Email;
 import org.example.company.repositories.EmailRepository;
 import org.postgresql.core.CommandCompleteParser;
 import org.postgresql.core.SqlCommand;
@@ -19,6 +20,10 @@ public class EmailRepositoryIMPL implements EmailRepository {
     private static String USER = "postgres";
     private static String PASSWORD = "1234";
     private static String URL = "jdbc:postgresql://localhost:5432/students";
+
+    public static void main(String[] args) {
+        EmailRepositoryIMPL repositoryIMPL = new EmailRepositoryIMPL();
+    }
 
 
     @Override
@@ -85,10 +90,23 @@ public class EmailRepositoryIMPL implements EmailRepository {
 
     @Override
     public List<Email> getEmailByStudentId(UUID id) {
-        return getAllEmails()
-                .stream()
-                .filter(e -> e.getStudentId().equals(id))
-                .collect(Collectors.toList());
+        List<Email> emailList = new ArrayList<>();
+        try {
+            Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement statement = connection.createStatement();
+            String line = "select * from emails where fk_student_id = " + "'" + id + "'";
+            ResultSet resultSet = statement.executeQuery(line);
+            while (resultSet.next()) {
+                UUID emailId = UUID.fromString(resultSet.getString("id"));
+                String emailLine = resultSet.getString("email");
+                UUID studentId = UUID.fromString(resultSet.getString("fk_student_id"));
+                Email email = new Email(id, emailLine, studentId);
+                emailList.add(email);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return emailList;
     }
 }
 

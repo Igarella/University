@@ -1,14 +1,20 @@
 package org.example.company.services.IMPL;
 
+import lombok.AllArgsConstructor;
 import org.example.company.DTO.*;
 import org.example.company.repositories.*;
 import org.example.company.repositories.IMPL.*;
 import org.example.company.services.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.UUID;
-
+//@Component
 public class StudentsServiceIMPL implements StudentsService {
+
+//    private final StudentsRepository repository;
+
     @Override
     public List<Student> getAllStudents() {
         StudentsRepository repository = new StudentsRepositoryIMPL();
@@ -37,9 +43,9 @@ public class StudentsServiceIMPL implements StudentsService {
         GroupService groupService = new GroupServiceIMPL();
         Group group = groupService.getGroupById(complexId.getGroupId());
         student.setGroupName(group.getGroupName());
-        FacultyService facultyService = new FacultyServiceIMPL();
-        Faculty faculty = facultyService.getFacultyById(group.getFacultyId());
-        student.setFacultyName(faculty.getFacultyName());
+//        FacultyService facultyService = new FacultyServiceIMPL();
+//        Faculty faculty = facultyService.getFacultyById(group.getFacultyId());
+//        student.setFacultyName(faculty.getFacultyName());
         SpecializationService specializationService = new SpecializationServiceIMPL();
         Specialization specialization = specializationService.getSpecializationById(group.getSpecializationId());
         student.setSpecializationName(specialization.getSpecializationName());

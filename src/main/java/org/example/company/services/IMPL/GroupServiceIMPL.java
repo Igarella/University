@@ -22,12 +22,6 @@ public class GroupServiceIMPL implements GroupService {
     }
 
     @Override
-    public void addStudentToGroupBYStudentId(UUID studentId) {
-        GroupRepository repository = new GroupRepositoryIMPL();
-        repository.addStudentToGroupBYStudentId(studentId);
-    }
-
-    @Override
     public Group getGroupById(UUID groupId) {
         GroupRepository repository = new GroupRepositoryIMPL();
         return repository.getGroupById(groupId);

@@ -10,7 +10,5 @@ public interface GroupService {
 
     void addGroup(Group group);
 
-    void addStudentToGroupBYStudentId(UUID studentId);
-
     Group getGroupById(UUID groupId);
 }

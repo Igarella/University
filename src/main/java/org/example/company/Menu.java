@@ -1,11 +1,11 @@
 package org.example.company;
 
 import org.example.company.DTO.*;
+import org.example.company.repositories.StudentsRepository;
 import org.example.company.services.*;
 import org.example.company.services.IMPL.*;
 import org.example.company.services.StudentsService;
 
-import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -212,7 +212,7 @@ public class Menu {
                     TimeTable timeTable = timeTableService.getTimeTableBySubjectId(subjectId);
                     TeacherService teacherService = new TeacherServiceImpl();
                     Teacher teacher = teacherService.getTeacherById(timeTable.getTeacherId());
-                    DataStudent dataStudent = new DataStudent(student, subject.getNameSubject(), assessment.getMark(), "" + teacher.getFirstName() + " " + teacher.getSecondName());
+                    DataStudent dataStudent = new DataStudent(student, subject.getNameSubject(), assessment.getMark(), "" + teacher.getFirstName() + " " + teacher.getThirdName());
                     System.out.println(dataStudent);
                 }
                 case 115 -> {
@@ -222,9 +222,9 @@ public class Menu {
                     Teacher teacher = teacherService.getTeacherById(teacherId);
                     System.out.println("Введите введите кол-во часов");
                     int hours = in.nextInt();
-                    TimeTable timeTable = new TimeTable(teacherId, teacher.getSubjectId(), hours);
+//                    TimeTable timeTable = new TimeTable(teacherId, hours);
                     TimeTableService service = new TimeTableServiceImpl();
-                    service.addTimeTable(timeTable);
+//                    service.addTimeTable(timeTable);
                 }
                 case 200 -> {
                     System.out.println("Введите имя учителя");
@@ -233,7 +233,7 @@ public class Menu {
                     String teacherSecondName = in.next();
                     System.out.println("Введите id предмета");
                     UUID subjectId = UUID.fromString(in.next());
-                    Teacher teacher = new Teacher(teacherFirstName, teacherSecondName, subjectId);
+                    Teacher teacher = new Teacher(teacherFirstName, teacherSecondName);
                     TeacherService service = new TeacherServiceImpl();
                     service.addTeacher(teacher);
                 }

@@ -17,6 +17,11 @@ public class PhoneRepositoryIMPL implements PhonesRepository {
     private static String PASSWORD = "1234";
     private static String URL = "jdbc:postgresql://localhost:5432/students";
 
+    public static void main(String[] args) {
+        PhoneRepositoryIMPL phoneRepositoryIMPL = new PhoneRepositoryIMPL();
+
+    }
+
     @Override
     public void addPhone(Phone phone) {
         try {
@@ -56,12 +61,25 @@ public class PhoneRepositoryIMPL implements PhonesRepository {
     }
 
     @Override
-    public List<Phone> getPhoneByStudentId(UUID studentId) {
-        List<Phone> phoneList = getAllPhones();
-        return phoneList
-                .stream()
-                .filter(e -> e.getStudentId().equals(studentId))
-                .collect(Collectors.toList());
+    public List<Phone> getPhoneByStudentId(UUID id) {
+        List<Phone> phoneList = new ArrayList<>();
+        try {
+            Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement statement = connection.createStatement();
+            String line = "select * from phones where fk_student_id = " + "'" + id + "'";
+            ResultSet resultSet = statement.executeQuery(line);
+            while (resultSet.next()) {
+                UUID phoneId = UUID.fromString(resultSet.getString("id"));
+                String phoneNumber = resultSet.getString("phone_number");
+                String typePhone = resultSet.getString("type_phone");
+                UUID studentId = UUID.fromString(resultSet.getString("fk_student_id"));
+                Phone phone = new Phone(id, phoneNumber, typePhone, studentId);
+                phoneList.add(phone);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return phoneList;
     }
 
     @Override

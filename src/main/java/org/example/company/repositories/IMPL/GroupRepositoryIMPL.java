@@ -1,14 +1,9 @@
 package org.example.company.repositories.IMPL;
 
 import org.example.company.DTO.Group;
-import org.example.company.DTO.Phone;
 import org.example.company.repositories.GroupRepository;
 import org.postgresql.util.PGobject;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,41 +14,52 @@ public class GroupRepositoryIMPL implements GroupRepository {
     private static String USER = "postgres";
     private static String PASSWORD = "1234";
     private static String URL = "jdbc:postgresql://localhost:5432/students";
+
+    public static void main(String[] args) {
+        GroupRepository repository = new GroupRepositoryIMPL();
+//        repository.addGroup(new Group("15PGSz - 4tex", UUID.fromString("cf353753-12cd-4ffd-9313-db2554e2434c")));
+        System.out.println(repository.getGroupById(UUID.fromString("e7a0093f-b6a8-4451-8a94-f97eda4cb855")));
+
+    }
     @Override
     public List<Group> getAllGroups() {
         List<Group> groupList = new ArrayList<>();
-//        List<Group> groupList = new ArrayList<>();
-//        try {
-//            Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-//            Statement statement = connection.createStatement();
-//            String line = "select * from phones";
-//            ResultSet resultSet = statement.executeQuery(line);
-//            while (resultSet.next()) {
-//                UUID id = UUID.fromString(resultSet.getString("id"));
-//                String phoneNumber = resultSet.getString("phone_number");
-//                String typePhone = resultSet.getString("type_phone");
-//                UUID studentId = UUID.fromString(resultSet.getString("fk_student_id"));
-//                Phone phone = new Phone(id, phoneNumber, typePhone, studentId);
-//                phoneList.add(phone);
-//            }
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement statement = connection.createStatement();
+            String line = "select * from groups";
+            ResultSet resultSet = statement.executeQuery(line);
+            while (resultSet.next()) {
+                UUID id = UUID.fromString(resultSet.getString("id"));
+                String groupName = resultSet.getString("group_name");
+                UUID specializationId = UUID.fromString(resultSet.getString("fk_specialization_id"));
+                Group group = new Group(id, groupName, specializationId);
+                groupList.add(group);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return groupList;
     }
 
     @Override
-    public void addStudentToGroupBYStudentId(UUID studentId) {
-
-    }
-
-    @Override
     public Group getGroupById(UUID groupId) {
-        return getAllGroups()
-                .stream()
-                .filter(e -> e.getGroupId().equals(groupId))
-                .findFirst()
-                .get();
+        Group group = null;
+            try {
+                Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                Statement statement = connection.createStatement();
+                String sql = "select * from groups where id = " + "'" + groupId + "'";
+                ResultSet resultSet = statement.executeQuery(sql);
+                while (resultSet.next()) {
+                    UUID id = UUID.fromString(resultSet.getString("id"));
+                    String groupName = resultSet.getString("group_name");
+                    UUID specializationId = UUID.fromString(resultSet.getString("fk_specialization_id"));
+                    group = new Group(id, groupName, specializationId);
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        return group;
     }
 
     @Override
@@ -70,10 +76,12 @@ public class GroupRepositoryIMPL implements GroupRepository {
             pgSpecializationId.setType("uuid");
             pgSpecializationId.setValue(specializationId.toString());
             Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            String sql = "INSERT INTO groups (id, ) values " +
-                    "(?)";
+            String sql = "INSERT INTO groups (id, group_name, fk_specialization_id) values " +
+                    "(?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//            preparedStatement.setString(1, subjectName);
+            preparedStatement.setObject(1, pgGroupId);
+            preparedStatement.setString(2, groupName);
+            preparedStatement.setObject(3, pgSpecializationId);
             int rows = preparedStatement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
