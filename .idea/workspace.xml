@@ -5,29 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="153bbc9e-b8dc-479d-9e8c-e05ec4ff05e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SpringApplicationUniversity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/company/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/company/JPARepository/StudentRepositoryJPA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/company/entities/StudentEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/company/transformer/StudentEntityToStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blog-main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/TimeTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/DTO/TimeTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/GroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/GroupRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/AssessmentRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/AssessmentRepositoryIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/ComplexStudentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/ComplexStudentRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/EmailRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/EmailRepositoryIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/FacultyRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/FacultyRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/GroupRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/GroupRepositoryIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/PhoneRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/PhoneRepositoryIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/controller/StudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/StudentsRepositoryIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/StudentsRepositoryIMPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/TeacherRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/TeacherRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/TimeTableRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/repositories/IMPL/TimeTableRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/services/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/services/GroupService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/services/IMPL/GroupServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/services/IMPL/GroupServiceIMPL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/services/IMPL/StudentsServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/services/IMPL/StudentsServiceIMPL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/company/services/StudentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/company/services/StudentsService.java" afterDir="false" />
     </list>
@@ -40,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -156,18 +144,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PhoneRepositoryIMPL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.company.repositories.IMPL.PhoneRepositoryIMPL" />
-      <module name="University" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.company.repositories.IMPL.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="SpringApplicationUniversity" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="University" />
@@ -185,10 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringApplicationUniversity" />
+        <item itemvalue="HTTP Request.generated-requests | #7" />
         <item itemvalue="Application.ComplexStudentRepositoryImpl" />
         <item itemvalue="Application.GroupRepositoryIMPL" />
         <item itemvalue="Application.EmailRepositoryIMPL" />
-        <item itemvalue="Application.PhoneRepositoryIMPL" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +185,8 @@
       <workItem from="1676537660995" duration="316000" />
       <workItem from="1676538074762" duration="104000" />
       <workItem from="1676538287060" duration="11706000" />
-      <workItem from="1676736021317" duration="687000" />
+      <workItem from="1676736021317" duration="5888000" />
+      <workItem from="1676742382867" duration="13616000" />
     </task>
     <task id="LOCAL-00001" summary="5 февраля почти перевел проект на базу данных">
       <created>1675671967604</created>
@@ -216,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675671967605</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SpringCommit">
+      <created>1676736959219</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676736959219</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +210,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="5 февраля почти перевел проект на базу данных" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 февраля почти перевел проект на базу данных" />
+    <MESSAGE value="SpringCommit" />
+    <option name="LAST_COMMIT_MESSAGE" value="SpringCommit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/company/controller/StudentController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,23 +2,39 @@ package org.example.company.services.IMPL;
 
 import lombok.AllArgsConstructor;
 import org.example.company.DTO.*;
+import org.example.company.JPARepository.StudentRepositoryJPA;
+import org.example.company.entities.StudentEntity;
 import org.example.company.repositories.*;
 import org.example.company.repositories.IMPL.*;
 import org.example.company.services.*;
+import org.example.company.transformer.StudentEntityToStudent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-//@Component
+@Component
+//@AllArgsConstructor
+//@Autowired
 public class StudentsServiceIMPL implements StudentsService {
+    private StudentRepositoryJPA repositoryJpa;
+    private StudentEntityToStudent transformer;
 
-//    private final StudentsRepository repository;
+    public StudentsServiceIMPL(StudentRepositoryJPA repositoryJpa, StudentEntityToStudent transformer) {
+        this.repositoryJpa = repositoryJpa;
+        this.transformer = transformer;
+    }
 
     @Override
     public List<Student> getAllStudents() {
-        StudentsRepository repository = new StudentsRepositoryIMPL();
-        return repository.getAllStudents();
+        List<Student> studentsList = new ArrayList<>();
+//        StudentsRepository repository = new StudentsRepositoryIMPL();
+        for (StudentEntity allStudent : repositoryJpa.findAll()) {
+            Student student = transformer.transform(allStudent);
+            studentsList.add(student);
+        }
+        return studentsList;
     }
 
     @Override

@@ -4,11 +4,13 @@ import org.example.company.DTO.Student;
 import org.example.company.repositories.StudentsRepository;
 import org.postgresql.util.PGobject;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+//@Repository
 public class StudentsRepositoryIMPL implements StudentsRepository {
 
     private static String USER = "postgres";

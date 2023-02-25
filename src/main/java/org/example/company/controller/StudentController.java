@@ -1,33 +1,34 @@
 package org.example.company.controller;
 
+import lombok.AllArgsConstructor;
+import org.example.company.DTO.Student;
 import org.example.company.services.StudentsService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
-//@RequestMapping("/students")
-//@AllArgsConstructor
-//@Slf4j
-//@Entity
+import java.util.List;
+
+@Controller
+@RequestMapping("/students")
+@AllArgsConstructor
 public class StudentController {
 //    @Autowired
-    private final StudentsService studentsService;
+    private StudentsService studentsService;
 
-    public StudentController(StudentsService studentsService) {
-        this.studentsService = studentsService;
-    }
+//    public StudentController(StudentsService studentsService) {
+//        this.studentsService = studentsService;
+//    }
 
     @GetMapping("/")
-    public ResponseEntity<String> getAllStudents() {
+    public List<Student> getAllStudents() {
 //        model.addAttribute("students", studentsService.getAllStudents());
         try {
-            return ResponseEntity.ok("Serever is working");
+            System.out.println("going to show all students");
+            return studentsService.getAllStudents();
 
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Something has gone wrong!");
+            return null;
         }
 //        return "students/all";
     }
